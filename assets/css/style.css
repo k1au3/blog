@@ -327,51 +327,441 @@ nav{
     text-align: center;
 }
 
- 
-.services  .service-container{
-    display: grid;
-    grid-template-columns: 1fr;
+.services .service-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
     gap: 1.2rem;
-    padding: 1rem;
-    width: 100%;
+    padding: 2rem 1rem;
 }
-@media (min-width: 600px) {
-    .services .service-container{
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        justify-content: center;
-        width: 70%
-    }
-}
-.services .service-container  #service{
+.services .service-container .service{
      display: flex;
      flex-direction: column;
+     flex: 1 1 calc(25% - 40px);
     /* border: 1px solid var(--eerie-black);*/
      align-items: center;
      gap: .9rem;
      text-align: center;
      border-radius: 10px;
      padding: 1rem;
-     height: max-content;
-     max-width: 500px;
      box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
-     margin: 0 auto;
+     margin: 1rem;
+}
+@media (max-width: 768px) {
+    .services .service-container .service{
+        flex: 1 1 100%;
+    }
 }
 
-.services .service-container #service  img{
+.services .service-container .service  img{
     width: 7rem;
     height: 7rem;
     object-fit: contain;
     border-radius: 10px 10px 0 0;
     border: 1px solid yellow;
 }
-.services .service-container #service  h2{
+.services .service-container .service  h2{
     font-size: 1em;
     font-weight: var(--fw-700);
 }
-.services .service-container #service p{
+.services .service-container .service p{
     font-size: .7em;
     font-weight: var(--fw-700);
     opacity: .7;
 }
 
+
+
+/*
+ *
+ * Works
+ *
+ */
+
+.working-container{
+    position: relative;
+    height: 100%;
+    background: url('../images/recommended-1.jpg') no-repeat center center/cover;
+}
+.working-container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.working-container .work-content{
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: #333;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
+    gap: 1rem;
+    margin: 0 1rem;
+}
+.working-container .work-content .work{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    padding: 1rem;
+    margin: 1rem;
+    flex: 1 1 calc(25% - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 768px) {
+    .working-container .work-content .work{
+        flex: 1 1 100%;
+    }
+}
+
+.working-container .work-content .work #outer{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 1px solid var(--eerie-black_80);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.working-container .work-content .work #outer #inner{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: var(--eerie-black_80);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.working-container .worl-content .work #outer #inner:hover{
+    background: var(--white);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    transition: all .3s ease-in-out;
+}
+.working-container .work-content .work #outer #inner h2{
+    font-size: 4rem;
+    font-weight: var(--fw-700);
+    text-align: center;
+    color: purple;
+}
+.working-container .work-content .work h4{
+    color: purple;
+    font-size: 1em;
+    font-weight: var(--fw-500);
+    text-transform: uppercase;
+    padding-block: 1rem;
+    text-align: center;
+}
+.working-container .work-content .work p{
+    font-size: .7em;
+    font-weight: var(--fw-700);
+    text-align: center;
+    opacity: .7;
+}
+
+
+/*
+ *
+ * why us
+ *
+ */
+
+.why-us-container{
+    padding: 2rem;
+}
+.why-us-container .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-block: 1rem;
+    width: 100%;
+    align-items: center;
+}
+.why-us-container .title h2{
+    font-size: 1.5em;
+    font-weight: var(--fw-700);
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    gap: .3rem;
+}
+.why-us-container .title h2 span{
+    color: purple;
+}
+.why-us-container .title p{
+    font-size: .9em;
+}
+.why-us-container .why-us-content{
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+.why-us-container .why-us-content #content{
+    flex: 1 1 calc(30% - 40px);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+@media (max-width: 768px) {
+    .why-us-container .why-us-content #content{
+        flex: 1 1 100%;
+    }
+}
+.why-us-container .why-us-content #content h3{
+    font-weight: var(--fw-500);
+    font-size: 1.2em;
+    text-align: center;
+    color: purple;
+}
+.why-us-container .why-us-content #content p{
+    font-weight: var(--fw-700);
+    font-size: .8em;
+    opacity: .7;
+    text-align: center;
+}
+
+
+
+/*
+ *
+ * Post your essay
+ *
+ */
+
+.post{
+    background: var(--eerie-black);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem
+    align-items: center;
+    justify-content: center;
+}
+.post p{
+    font-size: 1em;
+    font-weight: var(--fw-500);
+    text-align: center;
+    color: var(--white);
+}
+.post p span{
+    color: purple;
+}
+
+.post .post-btn{
+    display: flex;
+    align-items: center;
+    margin-block-start: 1.2em;
+    justify-content: center;
+}
+.post button{
+    margin-block: 1rem;
+    display: block;
+    padding: .8rem 1.2rem;
+    font-size: .8em;
+    font-weight: var(--fw-700);
+    color: var(--white);
+    background: purple;
+    border: none;
+    border-radius: 10px;
+}
+.post button:hover{
+    background: none;
+    border: 1px solid var(--white);
+    transition: all .3s ease;
+}
+
+
+
+
+/*
+ *
+ * proof of work
+ *
+ */
+
+
+.numbers-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgb(33, 37, 41);
+    color: var(--white);
+}
+.numbers-section .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.numbers-section .title h2{
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+    font-size: 1.5em;
+}
+.numbers-section .title h2 span{
+    color: purple;
+}
+.numbers-section .title #dash{
+    width: 10rem;
+    height: .5rem;
+    background: purple;
+    border-radius: 7px;
+}
+.numbers-section .title p{
+    font-size: .7em;
+    opacity: .7;
+    font-weight: var(--fw-500);
+    text-transform: uppercase;
+}
+.numbers-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.numbers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.number-card {
+    background-color: rgb(115, 93, 120);
+    border-radius: 10px;
+    margin: 10px;
+    width: 100%;
+    color: black;
+    padding: 20px;
+    flex: 1 1 calc(25% - 40px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.number-card p{
+    font-size: 1.3em;
+    font-weight: var(--fw-500);
+    text-transform: uppercase;
+}
+.number {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .number-card {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+/*
+ *
+ * reviews
+ *
+ */
+
+
+.reviews-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgb(0, 8, 20);
+    color: var(--white);
+}
+
+.reviews-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+.reviews-section h1 span{
+    color: purple;
+}
+
+.reviews-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--white);
+}
+
+.review-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.review-card {
+    background-color: rgb(94, 84, 142);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    flex: 0 0 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display:  flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.review-card h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: purple;
+}
+
+.review-card p {
+    font-size: 1em;
+    opacity: .7;
+    margin-bottom: 10px;
+}
+
+.review-card .name {
+    font-weight: var(--fw-700);
+    color: purple;
+    font-size: 1em
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews-container{
+        overflow-x: auto;
+    }
+    .review-track{
+        flex-wrap: nowrap;
+    }
+    .review-card {
+        flex: 0 0 100%;
+        margin: 1rem 0;
+        width: 100%;
+    }
+}

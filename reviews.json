@@ -1,0 +1,25 @@
+{
+    "reviews": [
+        {
+            "title": "Amazing Service!",
+            "content": "I am extremely happy with the quality of work. Highly recommended!",
+            "name": "John Doe"
+        },
+        {
+            "title": "Professional and Reliable",
+            "content": "The team was very professional and delivered on time.",
+            "name": "Jane Smith"
+        },
+        {
+            "title": "Great Experience",
+            "content": "The customer service was fantastic and the results exceeded my expectations.",
+            "name": "Mary Johnson"
+        },
+        {
+            "title": "Exceeded Expectations",
+            "content": "They went above and beyond to ensure the project was successful.",
+            "name": "James Brown"
+        }
+    ]
+}
+
