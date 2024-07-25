@@ -1,25 +1,12 @@
-{
-    "reviews": [
-        {
-            "title": "Amazing Service!",
-            "content": "I am extremely happy with the quality of work. Highly recommended!",
-            "name": "John Doe"
-        },
-        {
-            "title": "Professional and Reliable",
-            "content": "The team was very professional and delivered on time.",
-            "name": "Jane Smith"
-        },
-        {
-            "title": "Great Experience",
-            "content": "The customer service was fantastic and the results exceeded my expectations.",
-            "name": "Mary Johnson"
-        },
-        {
-            "title": "Exceeded Expectations",
-            "content": "They went above and beyond to ensure the project was successful.",
-            "name": "James Brown"
-        }
-    ]
-}
+[
+    { "text": "Review 1: This product is amazing!", "name": "John Doe" },
+    { "text": "Review 2: I love it!", "name": "Jane Smith" },
+    { "text": "Review 3: Would highly recommend.", "name": "Sam Wilson" },
+    { "text": "Review 4: Great value for the price.", "name": "Emily Davis" },
+    { "text": "Review 5: Exceeded my expectations.", "name": "Michael Brown" },
+    { "text": "Review 6: Fantastic quality!", "name": "Sarah Johnson" },
+    { "text": "Review 7: Will buy again.", "name": "Chris Lee" },
+    { "text": "Review 8: Five stars!", "name": "Anna Kim" },
+    { "text": "Review 9: Superb service.", "name": "David Clark" }
+]
 

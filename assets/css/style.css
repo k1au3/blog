@@ -35,7 +35,7 @@
    * typography
    */
 
-  --ff-inter: 'Inter', sans-serif;
+  --ff-inter: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
 
   --fs-1: 3.6rem;
   --fs-2: 3.2rem;
@@ -145,7 +145,7 @@ body.active { overflow: hidden; }
 
 ::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
 
-::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
+::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); } 
 
 
 
@@ -158,8 +158,9 @@ body.active { overflow: hidden; }
 header {
     position: fixed;
     width: 100%;
-    background: rgba(0, 0, 0, .95);
-    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, .8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -245,13 +246,13 @@ nav{
 }
 
 .overlay h3 {
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: var(--fw-500);
 
 
 }
 .overlay p{
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: var(--fw-700);
     opacity: .7;
 }
@@ -264,7 +265,7 @@ nav{
     margin-block-start: 2.5rem;
     color: var(--white);
     font-weight: var(--fw-700);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     background: rgba(0, 0, 0, .5);
     cursor: pointer;
     backdrop-filter: blur(20px);
@@ -359,14 +360,13 @@ nav{
     height: 7rem;
     object-fit: contain;
     border-radius: 10px 10px 0 0;
-    border: 1px solid yellow;
 }
 .services .service-container .service  h2{
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: var(--fw-700);
 }
 .services .service-container .service p{
-    font-size: .7em;
+    font-size: 1em;
     font-weight: var(--fw-700);
     opacity: .7;
 }
@@ -448,14 +448,14 @@ nav{
     transition: all .3s ease-in-out;
 }
 .working-container .work-content .work #outer #inner h2{
-    font-size: 4rem;
+    font-size: 1.5em;
     font-weight: var(--fw-700);
     text-align: center;
     color: purple;
 }
 .working-container .work-content .work h4{
     color: purple;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: var(--fw-500);
     text-transform: uppercase;
     padding-block: 1rem;
@@ -476,8 +476,11 @@ nav{
  */
 
 .why-us-container{
+    background: rgb(37, 36, 34);
+    color: var(--white);
     padding: 2rem;
 }
+
 .why-us-container .title{
     display: flex;
     flex-direction: column;
@@ -500,7 +503,7 @@ nav{
     color: purple;
 }
 .why-us-container .title p{
-    font-size: .9em;
+    font-size: 1.2em;
 }
 .why-us-container .why-us-content{
     display: flex;
@@ -513,8 +516,9 @@ nav{
     flex: 1 1 calc(30% - 40px);
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
     padding: 1rem;
-    gap: 1rem;
+    gap: 2rem;
 }
 @media (max-width: 768px) {
     .why-us-container .why-us-content #content{
@@ -523,13 +527,13 @@ nav{
 }
 .why-us-container .why-us-content #content h3{
     font-weight: var(--fw-500);
-    font-size: 1.2em;
+    font-size: 1.4em;
     text-align: center;
     color: purple;
 }
 .why-us-container .why-us-content #content p{
     font-weight: var(--fw-700);
-    font-size: .8em;
+    font-size: 1.2em;
     opacity: .7;
     text-align: center;
 }
@@ -547,12 +551,14 @@ nav{
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem
+    gap: 1.5rem;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 .post p{
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: var(--fw-500);
     text-align: center;
     color: var(--white);
@@ -566,19 +572,20 @@ nav{
     align-items: center;
     margin-block-start: 1.2em;
     justify-content: center;
+    position: relative;
 }
-.post button{
+.post #button{
     margin-block: 1rem;
     display: block;
     padding: .8rem 1.2rem;
-    font-size: .8em;
+    font-size: 1.2em;
     font-weight: var(--fw-700);
     color: var(--white);
     background: purple;
     border: none;
     border-radius: 10px;
 }
-.post button:hover{
+.post #button:hover{
     background: none;
     border: 1px solid var(--white);
     transition: all .3s ease;
@@ -623,7 +630,7 @@ nav{
     border-radius: 7px;
 }
 .numbers-section .title p{
-    font-size: .7em;
+    font-size: 1.2em;
     opacity: .7;
     font-weight: var(--fw-500);
     text-transform: uppercase;
@@ -676,92 +683,88 @@ nav{
  */
 
 
-.reviews-section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: rgb(0, 8, 20);
-    color: var(--white);
-}
 
-.reviews-section h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    display: inline-flex;
-    align-items:center;
-    flex-wrap: wrap;
-    gap: .5rem;
-}
-.reviews-section h1 span{
-    color: purple;
-}
 
-.reviews-container {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
+
+
+.review-container {
     position: relative;
-    max-width: 1200px;
+    width: 80%;
+    overflow: hidden;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
     margin: 0 auto;
-    color: var(--white);
 }
 
-.review-track {
+.reviews {
     display: flex;
-    animation: scroll 20s linear infinite;
+    transition: transform 0.5s ease-in-out;
 }
 
 .review-card {
-    background-color: rgb(94, 84, 142);
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); /* For Safari */
     border-radius: 10px;
     margin: 10px;
-    padding: 20px;
-    flex: 0 0 300px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display:  flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.review-card h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: purple;
 }
 
 .review-card p {
     font-size: 1em;
-    opacity: .7;
-    margin-bottom: 10px;
+    color: #333;
 }
 
 .review-card .name {
-    font-weight: var(--fw-700);
-    color: purple;
-    font-size: 1em
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
 }
 
-@media (max-width: 768px) {
-    .reviews-container{
-        overflow-x: auto;
-    }
-    .review-track{
-        flex-wrap: nowrap;
-    }
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+@media (min-width: 768px) {
     .review-card {
-        flex: 0 0 100%;
-        margin: 1rem 0;
-        width: 100%;
+        flex: 0 0 33.33%;
     }
 }
+
+
+
+
+/*
+ *
+ *
+ * footer
+ *
+ */
+
+
+
+

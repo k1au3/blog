@@ -48,30 +48,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('../../reviews.json')
-        .then(response => response.json())
-        .then(data => {
-            const reviewsContainer = document.getElementById('reviewsContainer');
-            const reviewTrack = document.createElement('div');
-            reviewTrack.className = 'review-track';
+const reviewsContainer = document.querySelector('.reviews');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+let currentIndex = 0;
+let reviews = [];
 
-            data.reviews.forEach(review => {
-                const reviewCard = document.createElement('div');
-                reviewCard.className = 'review-card';
-                reviewCard.innerHTML = `
-                    <h2>${review.title}</h2>
-                    <p>${review.content}</p>
-                    <p class="name">${review.name}</p>
-                `;
-                reviewTrack.appendChild(reviewCard);
-            });
+// Fetch reviews from JSON file
+fetch('../../reviews.json')
+    .then(response => response.json())
+    .then(data => {
+        reviews = data;
+        renderReviews();
+    });
 
-            // Duplicate the reviewTrack for infinite scrolling effect
-            reviewTrack.innerHTML += reviewTrack.innerHTML;
-            reviewsContainer.appendChild(reviewTrack);
-        })
-        .catch(error => console.error('Error fetching reviews:', error));
-});
+function renderReviews() {
+    reviewsContainer.innerHTML = '';
+    reviews.forEach(review => {
+        const reviewCard = document.createElement('div');
+        reviewCard.className = 'review-card';
+        reviewCard.innerHTML = `<p>${review.text}</p><div class="name">${review.name}</div>`;
+        reviewsContainer.appendChild(reviewCard);
+    });
+    updateSlide();
+}
+
+function updateSlide() {
+    const reviewCards = document.querySelectorAll('.review-card');
+    const containerWidth = reviewsContainer.offsetWidth;
+    const cardWidth = reviewCards[0].offsetWidth;
+    const cardsToShow = window.innerWidth < 768 ? 1 : 3;
+    const maxIndex = Math.ceil(reviews.length / cardsToShow) - 1;
+    
+    currentIndex = Math.min(currentIndex, maxIndex);
+    const translateXValue = -(currentIndex * containerWidth);
+    
+    reviewsContainer.style.transform = `translateX(${translateXValue}px)`;
+}
+
+function nextSlide() {
+    const cardsToShow = window.innerWidth < 768 ? 1 : 3;
+    const maxIndex = Math.ceil(reviews.length / cardsToShow) - 1;
+    
+    currentIndex = (currentIndex + 1) % (maxIndex + 1);
+    updateSlide();
+}
+
+function prevSlide() {
+    const cardsToShow = window.innerWidth < 768 ? 1 : 3;
+    const maxIndex = Math.ceil(reviews.length / cardsToShow) - 1;
+    
+    currentIndex = (currentIndex - 1 + (maxIndex + 1)) % (maxIndex + 1);
+    updateSlide();
+}
+
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+
+window.addEventListener('resize', updateSlide);
 
 

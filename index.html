@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excel Professor- Essay writing simplified</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Excel Professors- Essay writing simplified</title>
+    <link rel="stylesheet" href="assets/css/style.css?v=1.0.0">
+   <link rel='stylesheet' href='assets/css/app.color4.css'>
+    <link rel='stylesheet' href='assets/css/fixes.css'>
+   <link rel='stylesheet' href='assets/css/utility.css'>
+   <link rel='stylesheet' href='assets/css/vendor.css'>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Excel Professor</div>
+            <div class="logo">Excel Professors</div>
             <div class="menu-bar" onclick="toggleMenu()">☰</div>
             <div class="dropdown-menu" id="dropdownMenu">
                 <div class="dropdown-item">
@@ -25,7 +31,7 @@
                     <div class="submenu" id="aboutSubmenu">
                         <a href="#service1">Research & Academic Writing</a>
                         <a href="#service2">White Papers</a>
-                        <a href="#service3">Business Plan Reports</a>>
+                        <a href="#service3">Business Plan Reports</a>
                     </div>
                 </div>
             </div>
@@ -35,8 +41,8 @@
         <div class="overlay">
             <h1>Your academic life simplified</h1>
             <h3>Professional custom writing services</h3>
-            <p> <strong>Excel professor</strong> offers High Quality custom essay writing. </p>
-            <button id='hero-btn'>Check Us Out</button>
+            <p> <strong>Excel professors</strong> offers High Quality custom essay writing. </p>
+            <a href='#check'><div id='hero-btn'>Check Us Out</div></a>
         </div>
     </section>
 
@@ -49,7 +55,7 @@
         </div>
         <div class='service-container'>
             <div class='service'>
-                <img src='' alt='image' />
+                <img alt='icon' src='assets/images/icons/graduate.png' />
                 <h2>Research & Academic Writing</h2>
                 <p>
                     Research writinf is our flagship service. We are Excel Professor, after all, and we boast an aggregate total of several centuries' worth of expertise in teaching, writing and research. No matter what you're struggling with, chances are, one of us has taught it, and or, written several dozen papers on it.
@@ -57,7 +63,7 @@
             </div>
 
             <div class='service'>
-                <img src='' alt='image' />
+                <img alt='image' src='assets/images/icons/document.png' />
                 <h2> Resumes / Cover Letters </h2>
                 <p>
                     When you can't get the job through pure nepotism or wanton sexual favors, you need a well written resume. Let us help you. Little-known fact: We have written thousands of resumes, cover letters, linkedin profiles, and other professionals documents over the years.
@@ -65,15 +71,15 @@
             </div>
             
             <div class='service'>
-                <img src='' alt='image' />
-                <h2> White Papers, Industry reserach reports & business plans. </h2>
+                <img alt='icon' src='assets/images/icons/success.png' />
+                <h2> White Papers & Industry Reasearch </h2>
                 <p>
                     Maybe you're a forward thinking professional who wants some proffesional research to aid in your decision-making. Maybe you're a mid-level manager who wants to outsource so you can spend more time o the stuff that matters, like your friends, family and your church.
                 </p>
             </div>
 
             <div class='service'>
-                <img src='' alt='image' />
+                <img alt='icon' src='assets/images/icons/lightbulb.png' />
                 <h2> Copy Writing </h2>
                 <p>
                     Our Written content will increase brand awareness, and fine tune your business presence in advertising or other forms of marketing. We write ad copy so good, the Google bots crawling the web double over the algorithmic laughter, or tears of admiration for flawless prose, or some other emotion Google bots might have.
@@ -110,7 +116,7 @@
                 </p>
             </div>
 
-            <div class='work'>
+            <div class='work' id='check'>
                 <div id='outer'>
                     <div id ='inner'>
                         <h2>3</h2>
@@ -169,7 +175,7 @@
         <p>WRITING IS OUR BREAD AND BUTTER, EXCEPT IT’S MORE LIKE TRUFFLE CROISSANTS. WHETHER YOU’RE ANNOYED BY ARISTOTLE, CONFUSED BY COMMUNICATIONS, OR LOST IN LINGUISTICS,<span> WE CAN HELP!</span>
         </p>
         <div class='post-btn'>
-            <button> Post Your Project Now</button>
+            <a href='#'><div id='button'> Post Your Project Now</div></a>
         </div>
     </section>
 
@@ -201,12 +207,174 @@
         </section>
 
 
-         <section class="reviews-section">
-             <h1>Customer <span>Love Us</span></h1>
-            <div class="reviews-container" id="reviewsContainer">
-                <!-- Reviews will be loaded here dynamically -->
+       <!--  <div class="review-container">
+            <div class="reviews">
+            <!-- Review cards will be dynamically inserted here by JavaScript -->
+           <!-- </div>
+             <button class="prev-btn"><</button>
+             <button class="next-btn">></button>
+        </div -->
+
+
+
+
+
+
+         <footer>
+            <div class="outer-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="outer-footer__content u-s-m-b-40">
+
+                                <span class="outer-footer__content-title">Contact Us</span>
+                                <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
+
+                                    <span>Nairobi, kenya</span></div>
+                                <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
+
+                                    <span>(+254) 113 711 237</span></div>
+                                <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
+
+                                    <span>bosireedingtone@gmail.com</span></div>
+                                <div class="outer-footer__social">
+                                    <ul>
+                                        <li>
+
+                                            <a class="s-fb--color-hover" href="#"><i style="font-size: 1rem;" class="fab fa-facebook-f"></i></a></li>
+                                        <li>
+
+                                            <a class="s-tw--color-hover" href="#"><i style="font-size: 1rem;" class="fab fa-twitter"></i></a></li>
+                                        <li>
+
+                                            <a class="s-youtube--color-hover" href="https://wa.me/+254113711237"><i style="font-size: 1rem;" class="fab fa-whatsapp"></i></a></li>
+                                        <li>
+
+                                            <a class="s-insta--color-hover" href="https://instagram.com"><i style="font-size: 1rem;" class="fab fa-instagram"></i></a></li>
+                                        <li>
+
+                                            <a class="s-gplus--color-hover" href="#"><i style="font-size: 1rem;" class="fab fa-google-plus-g"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="outer-footer__content u-s-m-b-40">
+
+                                        <span class="outer-footer__content-title">Information</span>
+                                        <div class="outer-footer__list-wrap">
+                                            <ul>
+                                                <li>
+
+                                                    <a href="#"Essays</a></li>
+                                                <li>
+
+                                                    <a href="#">Account</a></li>
+                                                <li>
+
+                                                    <a href="#">Resources</a></li>
+                                                <li>
+
+                                                    <a href="#">Finance</a></li>
+                                                <li>
+
+                                                    <a href="#shop-side-version-2.html">FAQS</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="outer-footer__content u-s-m-b-40">
+                                        <div class="outer-footer__list-wrap">
+
+                                            <span class="outer-footer__content-title">Our Company</span>
+                                            <ul>
+                                                <li>
+
+                                                    <a href="#">About us</a></li>
+                                                <li>
+
+                                                    <a href="#">Contact Us</a></li>
+                                                <li>
+
+                                                    <a href="#">Sitemap</a></li>
+                                                <li>
+
+                                                    <a href="#">T&Cs</a></li>
+                                                <li>
+
+                                                    <a href="#">Location</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="outer-footer__content">
+
+                                <span class="outer-footer__content-title">Join our Newsletter</span>
+                                <form class="newsletter">
+                                    <div class="u-s-m-b-15">
+                                        <div class="radio-box newsletter__radio">
+
+                                            <input type="radio" id="male" name="gender">
+                                            <div class="radio-box__state radio-box__state--primary">
+
+                                                <label class="radio-box__label" for="male">Male</label></div>
+                                        </div>
+                                        <div class="radio-box newsletter__radio">
+
+                                            <input type="radio" id="female" name="gender">
+                                            <div class="radio-box__state radio-box__state--primary">
+
+                                                <label class="radio-box__label" for="female">Female</label></div>
+                                        </div>
+                                    </div>
+                                    <div class="newsletter__group">
+
+                                        <label for="newsletter"></label>
+
+                                        <input class="input-text input-text--only-white" type="text" id="newsletter" placeholder="Enter your Email">
+
+                                        <button class="btn btn--e-brand newsletter__btn" type="submit">SUBSCRIBE</button></div>
+
+                                    <span class="newsletter__text">Subscribe to the mailing list to receive updates on promotions.i.</span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+            <div class="lower-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="lower-footer__content">
+                                <div class="lower-footer__copyright">
+
+                                    <span>Copyright © 2024 <strong> Excel Professors </strong> All rights reserved.</span>
+                                </div>
+
+
+                                <div class="lower-footer__payment">
+                                    <ul>
+                                        <li><i class="fab fa-cc-stripe"></i></li>
+                                        <li><i class="fab fa-cc-paypal"></i></li>
+                                        <li><i class="fab fa-cc-mastercard"></i></li>
+                                        <li><i class="fab fa-cc-visa"></i></li>
+                                        <li><i class="fab fa-cc-discover"></i></li>
+                                        <li><i class="fab fa-dhl"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
 
     <script src="assets/js/script.js"></script>
